@@ -281,6 +281,18 @@ body { font-family: var(--font-family); font-size: 14px; line-height: 1.5; color
     z-index: 2;
 }
 
+.priority-low {
+    border-left: 4px solid #22C55E;
+}
+
+.priority-medium {
+    border-left: 4px solid #F59E0B;
+}
+
+.priority-high {
+    border-left: 4px solid #EF4444;
+}
+
 .event-title {
     display: block;
     font-weight: 600;
