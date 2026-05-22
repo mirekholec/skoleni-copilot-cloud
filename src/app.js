@@ -58,7 +58,6 @@ async function init() {
 function cacheDomReferences() {
     dom.weekNumber = document.getElementById('weekNumber');
     dom.weekRange = document.getElementById('weekRange');
-    dom.eventCount = document.getElementById('eventCount');
     dom.calendarHeader = document.getElementById('calendarHeader');
     dom.calendarBody = document.getElementById('calendarBody');
     dom.timeColumn = document.getElementById('timeColumn');
@@ -174,7 +173,6 @@ function renderCalendar() {
     renderCalendarHeader();
     renderTimeColumn();
     renderDayColumns();
-    renderEventCount();
 }
 
 /** Zobrazení informací o aktuálním týdnu v hlavičce */
@@ -184,23 +182,6 @@ function renderWeekInfo() {
     weekEnd.setDate(weekEnd.getDate() + 6);
     dom.weekNumber.textContent = `Týden ${weekNum}`;
     dom.weekRange.textContent = `${formatDate(state.currentWeekStart)} – ${formatDate(weekEnd)} ${weekEnd.getFullYear()}`;
-}
-
-/** Zobrazení počtu viditelných událostí aktuálního týdne v headeru */
-function renderEventCount() {
-    let count = 0;
-    for (let i = 0; i < 7; i++) {
-        const date = new Date(state.currentWeekStart);
-        date.setDate(date.getDate() + i);
-        const dayEvents = getEventsForDate(date);
-        count += dayEvents.filter(e => state.settings.activeCategories.includes(e.category)).length;
-    }
-    if (count > 0) {
-        dom.eventCount.textContent = count;
-        dom.eventCount.classList.add('is-visible');
-    } else {
-        dom.eventCount.classList.remove('is-visible');
-    }
 }
 
 /** Vykreslení hlavičky kalendáře (dny a data) */
