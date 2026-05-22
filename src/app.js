@@ -299,7 +299,7 @@ function createEventBlock(event) {
 
     const block = document.createElement('div');
     block.className = 'event-block';
-    if (event.priority) block.classList.add('priority-' + event.priority);
+    if (['low', 'medium', 'high'].includes(event.priority)) block.classList.add('priority-' + event.priority);
     block.style.top = `${top}px`;
     block.style.height = `${Math.max(height, 22)}px`;
     block.style.backgroundColor = event.color;
