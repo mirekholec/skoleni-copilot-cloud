@@ -46,6 +46,22 @@ body { font-family: var(--font-family); font-size: 14px; line-height: 1.5; color
     color: var(--color-text-secondary);
 }
 
+/* Počítadlo událostí v headeru */
+.event-count {
+    display: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--color-primary);
+    padding: 2px 8px;
+    border-radius: 12px;
+    line-height: 1.6;
+}
+
+.event-count.is-visible {
+    display: inline-block;
+}
+
 /* Tlačítka */
 .btn {
     display: inline-flex;
