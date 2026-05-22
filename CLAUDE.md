@@ -1,0 +1,2 @@
+- zde jsou specifické instrukce pro CLAUDE
+- CLAUDE nepoužívá AGENTS.md a odkaz na něj nemá přímý efekt při startu session

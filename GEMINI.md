@@ -1,0 +1,1 @@
+ - zde jsou specifické instrukce pro GEMINI

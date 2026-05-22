@@ -1,0 +1,1 @@
+Tento soubor nepoužívat a smazat. Místo něj rovnou použít AGENTS.md
