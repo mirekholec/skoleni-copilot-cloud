@@ -301,7 +301,7 @@ function createEventBlock(event) {
     block.className = 'event-block';
     block.style.top = `${top}px`;
     block.style.height = `${Math.max(height, 22)}px`;
-    block.style.backgroundColor = event.color;
+    block.style.borderLeftColor = event.color;
     block.dataset.eventId = event.id;
 
     const title = document.createElement('span');
